@@ -1,0 +1,63 @@
+-- This file has been generated from package.yaml by hpack version 0.28.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 3e082220efb08891972e5e3f5099482700a9820113814519a52201a2e43ce301
+
+name:           aesCipher
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/aesCipher#readme>
+homepage:       https://github.com/githubuser/aesCipher#readme
+bug-reports:    https://github.com/githubuser/aesCipher/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2018 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+cabal-version:  >= 1.10
+extra-source-files:
+    ChangeLog.md
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/aesCipher
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_aesCipher
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+      , AES 
+      , bytestring
+  default-language: Haskell2010
+
+executable aesCipher-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_aesCipher
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      aesCipher
+    , base >=4.7 && <5
+  default-language: Haskell2010
+
+test-suite aesCipher-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_aesCipher
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      aesCipher
+    , base >=4.7 && <5
+  default-language: Haskell2010
